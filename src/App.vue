@@ -6,6 +6,11 @@ const count = ref(0);
 const addCount = () => {
   count.value++;
 };
+const name: string = ref("佐藤");
+const inputEvent = (e: any) => {
+  ref(e.target.value);
+  console.log(e.target.value);
+};
 </script>
 
 <template>
@@ -17,11 +22,17 @@ const addCount = () => {
       width="125"
       height="125"
     />
-
+    <!-- v-model = v-bind + v-on -->
     <div class="wrapper">
       <HelloWorld msg="HelloWorld" />
       <button @click="addCount">count++</button>
       <p>{{ count }}</p>
+      <!-- v-modelとv-bindとv-onの違い
+      https://qiita.com/JetNel0/items/8aa1de448a16eb0c5e42 -->
+      <input type="text" :value="name" />
+      <input type="text" :input="inputEvent" />
+      <input type="text" v-model="name" />
+      <p>{{ name }}</p>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
