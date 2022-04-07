@@ -36,6 +36,7 @@ const inputEvent = (e: any) => {
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/children">children</RouterLink>
       </nav>
     </div>
   </header>

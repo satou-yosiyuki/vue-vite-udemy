@@ -1,16 +1,18 @@
-// <template>
-//   <div>Children(子供)</div>
-//   <Grand-Children />
-// </template>
+<template>
+  <div class="children">
+    <div>Children(子供)</div>
+    <GrandChildren />
+  </div>
+</template>
 
-// <script>
-// import GrandChildren from '@/components/GrandChildren';
+<script>
+import GrandChildren from "@/components/GrandChildren.vue";
 
-// export default {
-//   components: {
-//     GrandChildren,
-//   },
-// };
-// </script>
+export default {
+  components: {
+    GrandChildren,
+  },
+};
+</script>
 
-// <style></style>
+<style></style>
