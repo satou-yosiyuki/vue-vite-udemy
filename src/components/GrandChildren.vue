@@ -1,9 +1,11 @@
 <template>
   <div>GrandChildren(孫)</div>
+  <div>{{ "userName" }}</div>
 </template>
 
 <script>
-export default {};
+import { inject } from "vue";
+inject("userName");
 </script>
 
 <style></style>

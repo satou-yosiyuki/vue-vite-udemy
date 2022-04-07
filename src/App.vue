@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
-import { ref, reactive } from "vue";
-const count = ref(0);
-const addCount = () => {
-  count.value++;
-};
-const name: string = ref("佐藤");
-const inputEvent = (e: any) => {
-  ref(e.target.value);
-  console.log(e.target.value);
-};
-</script>
-
 <template>
   <header>
     <img
@@ -43,6 +28,32 @@ const inputEvent = (e: any) => {
 
   <RouterView />
 </template>
+<script setup lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "@/components/HelloWorld.vue";
+import { ref, reactive, provide } from "vue";
+// import { defineComponent } from "@vue/composition-api";
+
+// export default {
+//   data() {
+//     return {};
+//   },
+//   provide() {
+//     return { userName: "親で設定した名前" };
+//   },
+// };
+const count = ref(0);
+const addCount = () => {
+  count.value++;
+};
+const name: string = ref("佐藤");
+const inputEvent = (e: any) => {
+  ref(e.target.value);
+  console.log(e.target.value);
+};
+
+provide("userName");
+</script>
 
 <style>
 @import "@/assets/base.css";
