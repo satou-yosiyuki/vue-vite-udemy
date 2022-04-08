@@ -24,11 +24,16 @@
         <RouterLink to="/children">children</RouterLink>
         <RouterLink to="/teleport-test">Teleport</RouterLink>
         <RouterLink to="/composition-test">Composition</RouterLink>
+        <RouterLink to="/props-emit-test">PropsEmitTest</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <RouterView
+    :setupBooks="setupBooks"
+    :dataBooks="dataBooks"
+    @custom-event="parentMethod"
+  />
 </template>
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
@@ -44,6 +49,14 @@ import { ref, reactive, provide } from "vue";
 //     return { userName: "親で設定した名前" };
 //   },
 // };
+const setupBooks = reactive([
+  { title: "setupタイトル1", author: "setup著者1" },
+  { title: "setupタイトル2", author: "setup著者2" },
+]);
+const dataBooks = [
+  { title: "dataタイトル1", author: "data著者1" },
+  { title: "dataタイトル2", author: "data著者2" },
+];
 const count = ref(0);
 const addCount = () => {
   count.value++;
@@ -52,6 +65,10 @@ const name: string = ref("佐藤");
 const inputEvent = (e: any) => {
   ref(e.target.value);
   console.log(e.target.value);
+};
+
+const parentMethod = (e) => {
+  console.log(e);
 };
 
 provide("userName");
