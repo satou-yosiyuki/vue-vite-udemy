@@ -23,6 +23,7 @@
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/children">children</RouterLink>
         <RouterLink to="/teleport-test">Teleport</RouterLink>
+        <RouterLink to="/composition-test">Composition</RouterLink>
       </nav>
     </div>
   </header>

@@ -25,7 +25,12 @@ const router = createRouter({
     {
       path: "/teleport-test",
       name: "TeleportTest",
-      component:  () => import("../views/TeleportTest.vue"),
+      component: () => import("../views/TeleportTest.vue"),
+    },
+    {
+      path: "/composition-test",
+      name: "CompositionTest",
+      component: () => import("../views/CompositionTest.vue"),
     },
   ],
 });
