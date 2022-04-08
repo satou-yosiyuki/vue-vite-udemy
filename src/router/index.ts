@@ -22,6 +22,11 @@ const router = createRouter({
       name: "children",
       component: () => import("../views/Children.vue"),
     },
+    {
+      path: "/teleport-test",
+      name: "TeleportTest",
+      component:  () => import("../views/TeleportTest.vue"),
+    },
   ],
 });
 
