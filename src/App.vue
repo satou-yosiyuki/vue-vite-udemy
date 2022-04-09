@@ -25,6 +25,7 @@
         <RouterLink to="/teleport-test">Teleport</RouterLink>
         <RouterLink to="/composition-test">Composition</RouterLink>
         <RouterLink to="/props-emit-test">PropsEmitTest</RouterLink>
+        <RouterLink to="/function-test">Function</RouterLink>
       </nav>
     </div>
   </header>

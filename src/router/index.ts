@@ -37,6 +37,11 @@ const router = createRouter({
       name: "PropsEmitTest",
       component: () => import("../views/PropsEmitTest.vue"),
     },
+    {
+      path: "/function-test",
+      name: "functionTest",
+      component: () => import("../views/FunctionTest.vue"),
+    },
   ],
 });
 
