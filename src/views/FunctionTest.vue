@@ -5,10 +5,11 @@
     <p>単価:{{ item.price }}</p>
     <p>合計:{{ totalPrice }}</p>
     <div>数量</div>
-    <button @click="decrement">-</button><button @click="increment">+</button>
+    <button @click="decrement">-</buttoseetup><button @click="increment">+</button>
   </div>
 </template>
 
+// この書き方が新明さんおすすめ
 <script>
 import { reactive, computed } from "vue";
 
